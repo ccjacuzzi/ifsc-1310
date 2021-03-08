@@ -1,0 +1,124 @@
+/*----------- CSS Demo ----------*/
+
+/* ----Box Model | Box Sizing----------------- */
+/*----- This sort of resets the box size ------*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*------Global Styles------------------*/
+.container{
+  width: 80vw;
+  margin: 40px auto;
+}
+
+/*------Utility Classes (container) ------------------*/
+
+body {
+    margin: 0; /* Space around outside of element */
+    font-family: 'Poppins', sans-serif; /* Google Font declaration */
+}
+
+
+
+header.primary {
+    background-color: red;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    
+    /*---- Box Sizing ---- */
+    /* Long Form */
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    
+    /* Short Form: T, R, B, L */
+    padding: 40px 40px 20px 40px;
+    
+    /* T/B Form: T/B, R/L */
+    padding: 40px 40px
+}
+
+/* ----- h1 tags in the header --- */
+header.primary h1 {
+  font-size: 3.2rem /*-- rem vs. m --*/
+  margin:20px 0; /*--20px top and bottom. 0 right and left --*/
+  }
+
+/* Targeting the hyperlink of header.primary h1 */  
+header.primary h1 a { 
+  color:blue;
+  text-decoration: none;
+}
+
+header.primary h2{
+  font-size: 2rem;
+  /*top | l/r | bottom*/
+  margin:  20px auto 40px;
+}
+
+header.primary nav {
+  width:80vw; /* 80% of viewable screen width */
+  margin: 20px auto; /* auto r/l margin centers this */
+  background: pink;
+  max-width: 900px; /* max size of this block. change screen size to see how this works */
+}
+
+header.primary nav ul {
+  display:flex; /* -- Set as flexbox */
+  flex-direction:row;
+  justify-content:space-between;
+  padding:0;
+}
+
+header.primary nav ul li {
+  list-style-type: none;
+  text-shadow: none;
+  }
+
+header.primary nav a:link, header.primary nav a:visited {
+  color: rgb(255,255,255);
+  text-decoration: none;
+  background-color: black; /*all browsers support this. it's a fallback plan for rgba */
+  background-color: rgba(0,0,0,.4); /* Black transparent buttons */
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+header.primary nav a:hover, header.primary nav a:active {
+  background-color: grey;
+}
+
+
+#intro{
+  border-bottom: 1px solid orange;
+  padding-bottom: 1.5rem;
+}
+
+/*----- Bonus Content! Media Query ---- */
+@media screen and (max-width:690px){
+  header.primary nav ul {
+  display:flex; /* -- Set as flexbox */
+  flex-direction:column;
+  justify-content:space-between;
+  padding:0;
+  margin:0 auto;
+  }
+
+  header.primary nav a {
+    display:block;
+  }
+  
+  header.primary nav li {
+    margin-bottom: 20px;
+  }
+}
