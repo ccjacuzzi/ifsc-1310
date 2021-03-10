@@ -25,6 +25,11 @@ body {
     font-family: 'Poppins', sans-serif; /* Google Font declaration */
 }
 
+/*------Responsive Images ------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
 header.primary {
@@ -47,15 +52,17 @@ header.primary {
     padding: 40px 40px
 }
 
-/* ----- h1 tags in the header --- */
+/* ----- h1 elements in the header class primary --- */
 header.primary h1 {
-  font-size: 3.2rem /*-- rem vs. m --*/
+  font-size: 5rem /*-- rem vs. m --*/
   margin:20px 0; /*--20px top and bottom. 0 right and left --*/
   }
 
-/* Targeting the hyperlink of header.primary h1 */  
+/* Targeting the hyperlink of header.primary h1 */
+/* This also happens to override the instruction above */
 header.primary h1 a { 
   color:blue;
+  font-size: 3.5rem;
   text-decoration: none;
 }
 
@@ -90,7 +97,7 @@ header.primary nav a:link, header.primary nav a:visited {
   background-color: black; /*all browsers support this. it's a fallback plan for rgba */
   background-color: rgba(0,0,0,.4); /* Black transparent buttons */
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 100px 50px 25px 0px; /*--corner radius on each corner--*/
   transition: 1s;
 }
 
@@ -100,9 +107,112 @@ header.primary nav a:hover, header.primary nav a:active {
 
 
 #intro{
-  border-bottom: 1px solid orange;
+  border-bottom: 5px dotted orange;
   padding-bottom: 1.5rem;
 }
+
+/*-- h2 element inside of id intro --*/
+#intro h2{
+  
+}
+
+/*-- <p> element inside of id intro --*/
+#intro p {
+  line-height: 2.5;
+}
+
+#content {
+  /*--id content is parent container--*/
+  display: flex;
+  /*--<article> are the cildren--*/
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#content .post {
+  /*--elements of class post inside
+  of id content are parent--*/
+  display: flex;
+  /*--<header>,<p>,&<footer> are children--*/
+  flex-direction: column;
+  align-items:center;
+  }
+  
+#content article.post header {
+  /*--<header> inside an <article class=post> 
+  of id content is parent/container --*/
+  display:flex;
+  /*--<time>,<figure>,<a> are children--*/
+  flex-direction:column;
+  align-items: center;
+}
+
+#content .post figure {
+  margin: auto;
+}
+
+#content article.post {
+  width:30%;
+  box-shadow: 0 4px 8px black inset;
+  padding: 1em;
+}
+
+#content article.post:hover {
+  box-shadow: 0 4px 8px black;
+  }
+#content article time, #content article figcaption, #content article #post-meta {
+  font-size: .8rem;
+  text-transform: uppercase;
+  color:pink;
+}
+
+#content article img {
+  border-radius: 4px;
+}
+
+#content article a:link, #content article a:link  {
+  color:magenta;
+}
+
+#content article a:hover {
+  text-decoration: none;
+}
+
+#content {
+  border-bottom: 5px dotted orange;
+  padding-bottom: 1.5rem ;
+}
+
+/*--attribute selector--*/
+aside[role="complementary"] {
+  background-color: red;
+  color: white;
+  padding: 1.5rem;
+}
+
+aside .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+aside article.widget {
+  width: 40%;
+}
+
+aside a:link, aside a:visited {
+  color:white;
+  display: block;
+  margin-top: 20px;
+}
+
+aside footer {
+  display:none;
+  /*--Hide Footers from published Webpage--*/
+}
+
+
+
 
 /*----- Bonus Content! Media Query ---- */
 @media screen and (max-width:690px){
