@@ -12,6 +12,23 @@ html {
   box-sizing: inherit;
 }
 
+/*----Color Theme----*/
+/*---How to use these?---*/
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex { color: #305157; }
+.My-Color-Theme-2-hex { color: #BDD9DE; }
+.My-Color-Theme-3-hex { color: #76C8D6; }
+.My-Color-Theme-4-hex { color: #4A5557; }
+.My-Color-Theme-5-hex { color: #5A98A3; }
+
+/* Color Theme Swatches in RGBA */
+.My-Color-Theme-1-rgba { color: rgba(48, 81, 87, 1); }
+.My-Color-Theme-2-rgba { color: rgba(189, 217, 222, 1); }
+.My-Color-Theme-3-rgba { color: rgba(118, 200, 214, 1); }
+.My-Color-Theme-4-rgba { color: rgba(74, 85, 87, 1); }
+.My-Color-Theme-5-rgba { color: rgba(90, 152, 163, 1); }
+
+
 /*------Global Styles------------------*/
 .container{
   width: 80vw;
@@ -25,6 +42,19 @@ body {
     font-family: 'Poppins', sans-serif; /* Google Font declaration */
 }
 
+.img-right{
+  float:right;
+  margin:10px 0 10px 20px;
+  padding:5px;
+}
+
+.img-left{
+  float:left;
+  margin:0 20px 20px 0;
+  padding:5px;
+  border: 1px solid #4A5557;
+}
+
 /*------Responsive Images ------------------*/
 img {
   max-width: 100%;
@@ -32,8 +62,8 @@ img {
 }
 
 
-header.primary {
-    background-color: red;
+header {
+    background-color: #76C8D6;
     text-align: center;
     color: white;
     text-shadow: 2px 2px #000000;
@@ -60,10 +90,11 @@ header.primary h1 {
 
 /* Targeting the hyperlink of header.primary h1 */
 /* This also happens to override the instruction above */
-header.primary h1 a { 
-  color:blue;
+#Main_Header h1 a { 
+  color:#305157;
   font-size: 3.5rem;
   text-decoration: none;
+  text-shadow: 5px 5px #BDD9DE;
 }
 
 header.primary h2{
@@ -75,7 +106,8 @@ header.primary h2{
 header.primary nav {
   width:80vw; /* 80% of viewable screen width */
   margin: 20px auto; /* auto r/l margin centers this */
-  background: pink;
+  border-radius: 5px;
+  background: #BDD9DE;
   max-width: 900px; /* max size of this block. change screen size to see how this works */
 }
 
@@ -94,26 +126,25 @@ header.primary nav ul li {
 header.primary nav a:link, header.primary nav a:visited {
   color: rgb(255,255,255);
   text-decoration: none;
-  background-color: black; /*all browsers support this. it's a fallback plan for rgba */
-  background-color: rgba(0,0,0,.4); /* Black transparent buttons */
+  background-color: #4A5557; /* Black transparent buttons */
   padding: 8px 16px;
   border-radius: 100px 50px 25px 0px; /*--corner radius on each corner--*/
   transition: 1s;
 }
 
 header.primary nav a:hover, header.primary nav a:active {
-  background-color: grey;
+  background-color: #5A98A3;
 }
 
 
 #intro{
-  border-bottom: 5px dotted orange;
+  border-bottom: 5px dotted #76C8D6;
   padding-bottom: 1.5rem;
 }
 
 /*-- h2 element inside of id intro --*/
 #intro h2{
-  
+  font-size: 2rem;
 }
 
 /*-- <p> element inside of id intro --*/
@@ -145,6 +176,8 @@ header.primary nav a:hover, header.primary nav a:active {
   /*--<time>,<figure>,<a> are children--*/
   flex-direction:column;
   align-items: center;
+  background-color: #76C8D6;
+  border-radius: 5px;
 }
 
 #content .post figure {
@@ -153,41 +186,60 @@ header.primary nav a:hover, header.primary nav a:active {
 
 #content article.post {
   width:30%;
-  box-shadow: 0 4px 8px black inset;
+  box-shadow: 0 4px 4px #4A5557;
   padding: 1em;
 }
 
 #content article.post:hover {
-  box-shadow: 0 4px 8px black;
+  box-shadow: 0 8px 8px #4A5557;
   }
 #content article time, #content article figcaption, #content article #post-meta {
   font-size: .8rem;
   text-transform: uppercase;
-  color:pink;
+  color:white;
 }
 
 #content article img {
   border-radius: 4px;
 }
 
-#content article a:link, #content article a:link  {
-  color:magenta;
+#content article.post h2 {
+  background-color: #4A5557;
+  border-radius: 10px;
+  padding:5px 15px;
+  font-size: 1.25rem;
+  transition: .5s;
 }
 
-#content article a:hover {
+#content article.post h2:hover {
+  background-color: #5A98A3;
+  }
+
+#content article a:link, #content article a:visited  {
+  color:white;
   text-decoration: none;
 }
 
+#content article a:hover  {
+  text-decoration: none;
+  color: white;
+  }
+
 #content {
-  border-bottom: 5px dotted orange;
+  border-bottom: 5px dotted #76C8D6;
   padding-bottom: 1.5rem ;
 }
 
 /*--attribute selector--*/
 aside[role="complementary"] {
-  background-color: red;
+  background-color: #76C8D6;
   color: white;
   padding: 1.5rem;
+}
+
+aside article.widget header {
+  background-color: #BDD9DE;
+  border-radius: 5px;
 }
 
 aside .container {
@@ -208,7 +260,127 @@ aside a:link, aside a:visited {
 
 aside footer {
   display:none;
-  /*--Hide Footers from published Webpage--*/
+  /*--Display:none - Hide Footers from published Webpage--*/
+}
+
+#colophon {
+  background-color: #4A5557;
+}
+
+#colophon h6{
+  padding:20px;
+  margin:0;
+  color:#fff;
+  text-align:center;
+  font-size:.8rem;
+  text-transform:uppercase;
+}
+
+
+#additional-elements h2{
+  border-bottom: 1px dotted #76C8D6;
+}
+
+#additional-elements a:link, #additional-elements a:visited {
+  color: #305157;
+}
+
+#additional-elements a:hover, #additional-elements a:active {
+  text-decoration: none;
+}
+
+#additional-elements h3 {
+  clear:both;
+  border-left:5px solid #305157;/*Little Blue Line*/
+}
+
+table {
+  width:100%;
+  border:2px solid #5A98A3;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+table thead {
+  border:2px solid white;
+}
+
+table th h2 {
+  background-color: #4A5557;
+  color: white;
+  border-radius: 100px 50px 25px 0px;
+  margin:0;
+  padding:0;
+  }
+
+table th{
+  border-bottom: :2px solid #5A98A3 ;
+  background-color: white;
+  width:33%; /*Careful with table widths*/
+}
+
+table td{
+  border:2px solid #5A98A3;
+  padding:5px;
+}
+
+table tr:nth-child(odd){
+  background-color: #BDD9DE; /* Use rgba to add subtle color */
+}
+
+table tr:hover {
+  background-color: #76C8D6;
+}
+
+table caption {
+  color:silver;
+  padding:10px;
+  font-weight: bold:
+  font-size: 1.4rem;
+}
+
+#additional-elements ul {
+  list-style-type: square;
+  
+}
+
+#additional-elements ul li ul{
+  list-style: cjk-ideographic;
+  
+  color: red;
+}
+
+#additional-elements dl {
+  
+}
+
+#additional-elements dt {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#additional-items dd {
+  margin:0;
+}
+
+/*--Adjacent Sibling Selector---*/
+/* This puts a space after the dt befor the first dl item */
+dd + dt { /*combinator - any dt that follo*/
+  margin-top: 20px;
+}
+
+#additional-elements blockquote{
+  background-color: green;
+  padding:40px 60px;
+  border: 5px double yellow;
+}
+
+#additional-elements blockquote cite {
+  display:block;
+  font-size: .6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top:1.5rem;
 }
 
 
