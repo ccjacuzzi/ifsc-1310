@@ -1,3 +1,5 @@
+<!--Course Homepage-->
+
 <!doctype html>
 
 <html lang="en">
@@ -7,29 +9,38 @@
   <title>IFSC 1310 | Casey Jacuzzi</title>
   <meta name="description" content="Keyword Rich Description" />
   <meta name="author" content="Your Name" />
-  
-  <!-- Link to stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
+  <section id="main" class="container">
+  <header>
   <h1>Casey Jacuzzi</h1>
+  <h2>IFSC 1310 Course Homepage</h2>
   
   <nav>
     <ul>
       <li><a href="prototype/index.html">Prototype HTML5 Assignment</a></li>
       <li><a href="css demo/index.html">CSS Demo</a></li>
       <li><a href="flexbox froggy/index.html">Flexbox Froggy Assignment</a></li>
-      <li>Positioning Labs
-      <ul>
-        <li><a href="positioning-lab/float-1.html"</li>Float 1<a/></li>
-        <li><a href="positioning-lab/float-2.html"</li>Float 2<a/></li>
-        <li><a href="positioning-lab/absolute-1.html"</li>Absolute 1<a/></li>
-        <li><a href="positioning-lab/absolute-2.html"</li>Absolute 2<a/></li>
-      </ul>
+      <li>
+        <input type="checkbox" id="menu">
+        <label for="menu">Positioning Labs</label>
+        <div class="collapsible-menu">
+        <ul>
+          <li><a href="positioning-lab/float-1.html"</li>Float 1<a/></li>
+          <li><a href="positioning-lab/float-2.html"</li>Float 2<a/></li>
+          <li><a href="positioning-lab/absolute-1.html"</li>Absolute 1<a/></li>
+          <li><a href="positioning-lab/absolute-2.html"</li>Absolute 2<a/></li>
+        </ul>
+        </div> <! .collapsible-menu >
       </li>
     </ul>
     
   </nav>
+  </header>
+  </section> <! #main .container>
 </body>
 </html>

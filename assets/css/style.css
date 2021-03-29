@@ -1,5 +1,85 @@
 /*---------  Course Homepage Stylesheet --------*/
 
-body {
-    background-color:deepskyblue;
+
+/* ----Box Model | Box Sizing----------------- */
+html {
+  box-sizing: border-box;
 }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*------Global Styles------------------*/
+.container{
+  width: 80vw;
+  margin: 0;
+  }
+
+/*------Utility Classes (container) ------------------*/
+
+body {
+    margin: 0; /* Space around outside of element */
+    font-family: 'Poppins', sans-serif; /* Google Font declaration */
+    padding: 2.5vw 10vw;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    text-align: center;
+    }
+    
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 2rem;
+}
+
+#main nav {
+    }
+
+#main nav li {
+    list-style-type: none;
+    background-color: grey;
+    margin:2px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#main nav li:hover {
+    background-color: yellow;
+}
+
+#main nav li a:visited, #main nav li a:link {
+    text-decoration: none;
+    color:black;
+}
+
+
+
+/*--- Positioning Labs Menu ---*/
+.collapsible-menu ul {
+    list-style: none;
+}
+
+input#menu {
+    display: none;
+}
+
+.collapsible-menu {
+    max-height: 0;
+    overflow: hidden;
+}
+
+input:checked ~ .collapsible-menu {
+    max-height: 100%;
+}
+
+
