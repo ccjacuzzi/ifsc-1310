@@ -43,10 +43,11 @@ header h2 {
 }
 
 #main nav {
-    }
+}
 
 #main nav li {
-    list-style-type: none;
+    padding-left: 0;
+    list-style: none;
     background-color: grey;
     margin:2px;
     width: 100%;
