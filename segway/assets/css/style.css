@@ -1,0 +1,212 @@
+/* ----- Segway Centaur --------------*/
+
+/* ------Color Theme ------ */
+
+/* ----- Box Sizing --------*/
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ----- Utility Styles ---- */
+
+.container {
+  width: 80vw;
+  margin: 40px auto;
+  max-width: 1140px;
+  background-color: white;
+}
+
+.img-right {
+  float: right;
+  margin: 10px 0 10px 20px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+.img-left {
+  float: left;
+  margin: 10px 20px 10px 0;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+.img-center {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+}
+
+
+
+/* ---- Responsive Images ----*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- Global Styles ---- */
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+
+/* ------------- Header --------------- */
+header.primary {
+    background-color:; /* Update color */
+    
+    margin-bottom: 0px;
+    }
+
+header nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin-left: 10vw;
+    }
+header.primary nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+header.primary h1 {
+    margin-right: 10vw;
+    }
+header.primary nav li {
+    list-style-type: none;
+    margin: 0 0 0 10px;
+    padding: 10px;
+    }
+header.primary a {
+    text-decoration: none;
+    }
+header.primary a:link, header.primary a:visited {
+    color: black;
+    }
+
+header.primary a:hover, header.primary a:active {
+    color: black;
+    text-decoration: underline;
+    }
+    
+/* ------ home page slogan ---- */
+#slogan h2 {
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    margin: 15px;
+    }
+ #slogan {
+     background-image: url("../img/Header_background.svg");
+     background-position: center;
+     margin:0;
+     padding:0;
+     height: 400px;
+     }
+     
+#slogan img {
+    
+}
+     
+#banner {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+ 
+ /* ------ content ---- */  
+ #content {
+     padding: 10px;
+     border-style:solid;
+     color: black;
+     align-text: center;
+     }
+ 
+ /* ------ article ---- */
+ #article {
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+     }
+ article.post {
+     border-style: solid;
+     width: 45%;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+     }
+ article.post h2 {
+    text-align: center;
+     }
+ article.post li {
+    margin-bottom: 10px;
+     }     
+
+ 
+ /* ------ tech ------- */
+ #tech{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     }
+ 
+ #techsection{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     }
+     
+#techContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-content: center;
+    }
+     
+#tech h2 {
+    text-align: center;
+    }  
+ 
+ #techtopic {
+     border-style: solid;
+     margin-bottom: 40px;
+     }  
+#techtopic ul {
+   width: 75%; 
+}
+ #techtopic li {
+     margin-bottom: 10px;
+ }     
+     
+ /* ------ footer ---- */
+#colophon {
+    text-align: center;
+    width: cover;
+    color: white;
+    background-color: black;
+    }
+#colophon h6 {
+    padding: 20px;
+    font-size: 1rem;
+    }
+#colophon a:Link, #colophon a:visited {
+    text-decoration: none;
+    color: white;
+    }
+#colophon a:hover, #colophon a:active {
+    text-decoration: underline;
+    color: white;
+    }
