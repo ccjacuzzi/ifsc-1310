@@ -26,7 +26,8 @@ body {
 	border-right-style: solid;
 	border-bottom-style: solid;
 	border-left-style: solid;
-	width: 80%;
+	width: 80vw;
+	height: 80vw;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
@@ -38,8 +39,9 @@ body {
 	left: 0;
 	width: 175px;
 	height: 175px;
-	
+
 }
+
 #green {
 	background-color: #090;
 	position: absolute;
@@ -47,6 +49,7 @@ body {
 	right: 0;
 	width: 175px;
 	height: 175px;
+
 }
 #blue {
 	background-color: #00F;
@@ -66,9 +69,12 @@ body {
 }
 #footer {
 	background-color: #666;
-	width: 175px;
-	height: 175px;
-	margin: 25%;
+	position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:175px;
+    height:175px;
 }
 h1 {
 	color: #000;
@@ -76,12 +82,7 @@ h1 {
 	padding: 50px;
 }
 
-footer{
-	color: black;
-	margin: 20px 0 20px 0;
-	padding-top: 10px;
-	border-top: 1.5px solid black;
-}
+
 </style>
 </head>
 
@@ -94,6 +95,6 @@ footer{
   <div id="purple">Purple</div>
   <div id="footer">Footer</div>
 </div>
-<footer>IFSC 1310 | Casey Jacuzzi</footer>
+
 </body>
 </html>

@@ -43,6 +43,11 @@ header h2 {
 }
 
 #main nav {
+    width: 80vw;
+}
+
+#main nav ul {
+    padding: 0;
 }
 
 #main nav li {
@@ -55,7 +60,7 @@ header h2 {
 }
 
 #main nav li:hover {
-    background-color: yellow;
+    background-color: silver;
 }
 
 #main nav li a:visited, #main nav li a:link {
@@ -65,7 +70,8 @@ header h2 {
 
 
 
-/*--- Positioning Labs Menu ---*/
+/*--- Positioning Labs Menu ------------------------------*/
+/*--- This was a css menu tutorial I found on the web. ---*/
 .collapsible-menu ul {
     list-style: none;
 }
